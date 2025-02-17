@@ -20,10 +20,6 @@ A Movie Discovery Web Application that allows users to search for movies, view d
 
 **API:** TMDb API
 
-**Database:** Supabase
-
-**Authentication:** Hanko Auth
-
 **Client:** React.JS
 
 **API:** TMDb API
@@ -31,31 +27,7 @@ A Movie Discovery Web Application that allows users to search for movies, view d
 
 ## Live Project Link
 
-Click Here - https://my-awesome-movie-app.netlify.app
-## Run Locally
-
-To run this project locally -
-
-Clone the project
-
-```bash
-  git clone https://github.com/rabbiincode/movies-app
-```
-
-Go to the project directory
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm start
-```
-
+Click Here - https://movie-app-ashen-beta.vercel.app
 
 ## Contributing
 
