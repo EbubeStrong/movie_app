@@ -9,7 +9,7 @@ import WatchScreen from "./components/watch-screen/WatchScreen";
 import SearchScreen from "./components/search-screen/SearchScreen";
 import FavoriteMovies from "./components/favorite-movies/FavoriteMovies";
 import UserDetails from "./components/authentication/UserDetails";
-import supabase from "../supabase";
+// import supabase from "../supabase";
 import "./App.css";
 
 const App = () => {
@@ -30,28 +30,28 @@ const App = () => {
   //   getUser()
   // }, [navigate])
 
-  useEffect(() => {
-    // Listens actively to the database for changes and updates immediately
-    const subscription = supabase
-      .channel("users")
-      .on(
-        "postgres_changes",
-        {
-          event: "*",
-          schema: "public",
-          table: "users",
-          condition: `new.userid = '${userId?.id}'`,
-        },
-        (payload) => {
-          setDarkMode(payload.new.darkmode);
-          setFavoriteMoviesId(payload.new.moviesid);
-        }
-      )
-      .subscribe();
+  // useEffect(() => {
+  //   // Listens actively to the database for changes and updates immediately
+  //   const subscription = supabase
+  //     .channel("users")
+  //     .on(
+  //       "postgres_changes",
+  //       {
+  //         event: "*",
+  //         schema: "public",
+  //         table: "users",
+  //         condition: `new.userid = '${userId?.id}'`,
+  //       },
+  //       (payload) => {
+  //         setDarkMode(payload.new.darkmode);
+  //         setFavoriteMoviesId(payload.new.moviesid);
+  //       }
+  //     )
+  //     .subscribe();
 
-    // Clean up the listener when the component unmounts
-    return () => subscription.unsubscribe();
-  }, [darkMode, favoriteMoviesId, userId?.id]);
+  //   // Clean up the listener when the component unmounts
+  //   return () => subscription.unsubscribe();
+  // }, [darkMode, favoriteMoviesId, userId?.id]);
 
   return (
     <div className={`app ${darkMode && "app-dark"}`}>
