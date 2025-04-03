@@ -15,7 +15,7 @@ const Footer = ({darkMode}) => {
         <span>Privacy & Policy</span>
         <span>Press Room</span>
       </div>
-      <div className='copyright'>&copy; {new Date().getFullYear()} MovieBox by Success</div>
+      <div className='copyright'>&copy; {new Date().getFullYear()} MovieBox by Strong</div>
     </div>
   )
 }
